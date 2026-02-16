@@ -40,15 +40,16 @@ h2 {
     
 }
 .group{
+    margin-bottom: 5px;
     margin-bottom: 15px;
 }
 
 .content {
    
-    height: 5s0px;
+    height: 50%s;
     margin: 20px;
     display: block;
-    padding: 20px;
+    padding: -50px;
     background-color: #ecf0f1;
     border-radius: 25px;
     text-align: center;
@@ -68,8 +69,6 @@ input{
     
     width: 280px;
     padding: 10px 5px;
-    margin: 5px;
-    
     
     border: none;
     border-bottom: 2px solid rgba(28, 31, 241, 0.788);
