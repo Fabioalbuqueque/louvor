@@ -16,23 +16,27 @@
   
   <section class="content">
     <h2>Cadastro do Louvor</h2>
-      <form class="for">
+      <form class="for" [formGroup]="registerform" (ngSubmit)="onSubmit()">
         <div class="group">
             <label for="name">Nome:</label>
-        <input type="text" id="nemail" name="mail" >
-        </div>
+        <input type="text" id="name" formControlName="name" required name="name">
+         </div>
+          <small *ngIf="registerform.get('name')?.invalid && registerform.get('name')?.touched">O nome é obrigatório.</small>
+      
         <div class="group">
             <label for="email">Email:</label>
-        <input type="text" id="nemail" name="mail" >
-        </div>
+        <input type="text" id="nemail" name="mail" formControlName="email" required > 
+            </div>
+        <small *ngIf="registerform.get('email')?.invalid && registerform.get('email')?.touched">O email é obrigatório.</small>
+   
         <br>
         <div class="group">
             <label for="password">Password:</label>
-        <input type="text" id="password" name="password" >
+        <input type="text" id="password" name="password" formControlName="password" required > 
         </div>
         
         <br>
-        <button type="submit">Enviar</button>
+        <button type="submit" [disabled]="registerform.invalid">Cadastrar</button>
       </form>
          <p>Ja tem conta <a href="/"> Login </a></p>
 
