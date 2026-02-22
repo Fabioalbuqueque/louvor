@@ -32,25 +32,24 @@ h2 {
 }
 
 .content {
-  width: 500px;
-  height: 450px;
-  display: block;
-  padding: 20px;
-  background-color: #ecf0f1;
-  border-radius: 25px;
-  text-align: center;
-  justify-content: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -270px 0 0 -270px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-
-  color: rgba(28, 25, 219, 0.973);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+ width: 500px;
+    height: 450px;
+    display: block;
+    padding: -50px;
+    background-color: #ecf0f1;
+    border-radius: 25px;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -230px 0 0 -270px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    color: rgba(28, 25, 219, 0.973);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 input {
