@@ -1,19 +1,19 @@
 <article>
   <section class="content">
     <h2>Bem-vindo ao Louvor</h2>
-    <form class="for">
+    <form class="for" [formGroup]="loginform" (ngSubmit)="onSubmit()">
       <div class="group">
         <label for="email">Email:</label>
-        <input type="text" id="email" name="email" />
+        <input type="text" id="email" name="email" formControlName="email" required />
       </div>
       <br />
       <div class="group">
         <label for="password">Password:</label>
-        <input type="text" id="password" name="password" />
+        <input type="password" id="password" name="password" formControlName="password" required/>
       </div>
 
       <br />
-      <button type="submit">Enviar</button>
+      <button type="submit" [disabled]="loginform.invalid">Entrar</button>
     </form>
     <p>nao tem conta<a href="/cadastro"> cadastre-se</a></p>
   </section>
