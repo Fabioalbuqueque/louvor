@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-cadastro',
@@ -13,7 +15,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 export class Cadastro {
  registerform: FormGroup;
 
- constructor(private fb: FormBuilder,  private http: HttpClient) {
+ constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) {
    this.registerform = this.fb.group({
      name: ['', [Validators.required]],
      email: ['', [Validators.required, Validators.email]],
@@ -28,6 +30,7 @@ export class Cadastro {
             console.log("Salvo:", res);
             alert("Cadastro realizado!");
             this.registerform.reset();
+            this.router.navigate(['']);
           },
           error: (err) => {
             console.error("Erro:", err);
