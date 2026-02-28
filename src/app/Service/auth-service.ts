@@ -15,4 +15,8 @@ export class AuthService {
   login(data: any) {
     return this.http.post(`${this.api}/login`, data);
   }
+
+  logout() {
+    return this.http.post(`${this.api}/logout`, {});
+  }
 }
