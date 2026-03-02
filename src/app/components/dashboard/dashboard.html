@@ -1,16 +1,30 @@
 <header class="header">
-        <h1>louvor</h1>
+        <div class="user-info" *ngIf="user">
+          <span>{{user.name}}</span>
+          <div class="avatar-container">
+            <img [src]="user.profileImage || ('https://www.gravatar.com/avatar/' + user.emailHash + '?s=40&d=identicon')" alt="Avatar" class="avatar">
+            <button class="edit-avatar-btn" type="button" title="Editar foto" (click)="fileInput.click()">📷</button>
+            <input #fileInput type="file" accept="image/*" (change)="uploadProfileImage($event)" style="display: none;">
+          </div>
+        </div>
       <nav>
         <ul>
           <li><a href="/">Inicio</a></li>
           <li><a href="#">Escala</a></li>
           <li><a href="#">Limpeza</a></li>
-          <li><a href="#">Musicas</a></li>
+          <li><a href="../musica">Musicas</a></li>
 
         </ul>
 
       </nav>
       <button class="btn" type="button" (click)="logout()">logout</button>
     </header>
+    <section class="dashboard">
+      <button class="btn" type="button">Add Escala</button>
+      <button class="btn" type="button">Add Limpeza</button>
+      <button class="btn" type="button">Add Musica</button>
+    </section>
+
+
 
 
