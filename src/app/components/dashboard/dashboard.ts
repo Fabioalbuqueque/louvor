@@ -26,6 +26,10 @@ export class Dashboard implements OnInit {
     });
   }
 
+  criar(){
+    this.router.navigate(['/criar']);
+  }
+
   uploadProfileImage(event: any): void {
     const file = event.target.files[0];
     if (!file) return;
